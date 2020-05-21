@@ -4,6 +4,7 @@ public class FizzBuzz {
 
   public static void main(String[] args)  {
     for (int counter = 1; counter < 100; counter++)  {   //Repeat from 1 to 100
+      String status = "";
       //  --Check whether the current counter value is fizz, buzz, or both.
       //  --Print the number, or fizz, or buzz, or fizzbuzz, as appropriate.
       boolean counterIsFizz = (counter % 3 == 0);
@@ -21,15 +22,16 @@ public class FizzBuzz {
       //   otherwise, if counterIsFizz, then print fizz;
       //   otherwise, if counterIsBuzz, then print buzz;
       //   otherwise, print counter.
-      if (counterIsFizz && counterIsBuzz)  {   //&& is short circuit
-        System.out.println("fizzbuzz");
-      }  else if (counterIsFizz) {
-        System.out.println("fizz");
-      }  else if (counterIsBuzz) {
-        System.out.println("buzz");
-      }  else  {
-        System.out.println(counter);
+      if (counterIsFizz) {
+         status += "fizz";  //System.out.println("fizz");
       }
+      if (counterIsBuzz) {
+         status += "buzz";   //System.out.println("buzz");
+      }
+      if (status.isEmpty()){
+         status += counter;  //System.out.println(counter);
+      }
+      System.out.println(status);
 
       }
       }
