@@ -38,6 +38,7 @@ public class FizzBuzz {
     if (status.isEmpty()){
        status += value;  //System.out.println(value);
     }
+//    assert value != 60 || status.equals("fizzbuzz");  //assertion placed in regular code to break if it has a problem
     return status;
   }
 
